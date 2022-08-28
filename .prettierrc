@@ -1,0 +1,14 @@
+{
+	"arrowParens": "avoid",
+	"bracketSpacing": true,
+	"cursorOffset": -1,
+	"editorconfig": true,
+	"embeddedLanguageFormatting": "auto",
+	"insertPragma": false,
+	"overrides": [],
+	"plugins": [],
+	"proseWrap": "always",
+	"quoteProps": "consistent",
+	"semi": true,
+	"trailingComma": "es5"
+}

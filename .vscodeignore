@@ -1,10 +1,18 @@
-.vscode/**
-.vscode-test/**
-src/**
+# source
+/src
+/.github
 .gitignore
-.yarnrc
-vsc-extension-quickstart.md
-**/tsconfig.json
-**/.eslintrc.json
-**/*.map
-**/*.ts
+/dist/**/*.js.map
+
+# testing and coverage
+/dist/runTest.js
+/dist/__test__
+/coverage
+
+# config
+tsconfig*.json
+.eslintrc.js
+.prettierrc
+.prettierignore
+/.vscode
+/.vscode-test

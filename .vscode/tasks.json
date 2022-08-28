@@ -1,20 +1,216 @@
-// See https://go.microsoft.com/fwlink/?LinkId=733558
-// for the documentation about the tasks.json format
 {
 	"version": "2.0.0",
+
 	"tasks": [
 		{
-			"type": "npm",
-			"script": "watch",
-			"problemMatcher": "$tsc-watch",
-			"isBackground": true,
-			"presentation": {
-				"reveal": "never"
+			"label": "TypeScript: Compile",
+			"icon": {
+				"id": "archive",
+				"color": "terminal.ansiBlue"
 			},
+
+			"type": "npm",
+			"script": "build",
+
+			"isBackground": false,
 			"group": {
 				"kind": "build",
 				"isDefault": true
-			}
+			},
+			"presentation": {
+				"echo": false,
+				"panel": "dedicated",
+				"showReuseMessage": false
+			},
+
+			"problemMatcher": ["$eslint-compact", "$tsc"]
+		},
+
+		{
+			"label": "TypeScript: Compile (Watch Mode)",
+			"icon": {
+				"id": "search",
+				"color": "terminal.ansiBlue"
+			},
+
+			"type": "npm",
+			"script": "build:watch",
+
+			"isBackground": true,
+			"group": "build",
+			"presentation": {
+				"echo": false,
+				"panel": "dedicated",
+				"showReuseMessage": false
+			},
+
+			"problemMatcher": ["$eslint-compact", "$tsc-watch"]
+		},
+
+		{
+			"label": "VSCode: Run tests",
+			"icon": {
+				"id": "beaker",
+				"color": "terminal.ansiCyan"
+			},
+
+			"type": "npm",
+			"script": "test",
+
+			"isBackground": true,
+			"presentation": {
+				"echo": false,
+				"panel": "dedicated",
+				"showReuseMessage": false
+			},
+
+			"problemMatcher": ["$eslint-compact", "$tsc"]
+		},
+
+		{
+			"label": "Prettier ESLint: Format",
+			"icon": {
+				"id": "wand",
+				"color": "terminal.ansiMagenta"
+			},
+
+			"type": "npm",
+			"script": "format",
+
+			"isBackground": false,
+			"group": "build",
+			"presentation": {
+				"echo": false,
+				"panel": "dedicated",
+				"showReuseMessage": false
+			},
+
+			"problemMatcher": ["$eslint-compact"]
+		},
+
+		{
+			"label": "NPM: Link local dependencies",
+			"icon": {
+				"id": "package",
+				"color": "terminal.ansiRed"
+			},
+
+			"type": "shell",
+			"command": "npm link ${input:localPackages}",
+
+			"isBackground": false,
+			"presentation": {
+				"echo": false,
+				"panel": "dedicated",
+				"showReuseMessage": false
+			},
+
+			"problemMatcher": []
+		},
+
+		{
+			"label": "NPM: Install dependencies",
+			"icon": {
+				"id": "package",
+				"color": "terminal.ansiRed"
+			},
+
+			"type": "shell",
+			"command": "npm i ${input:packages}",
+
+			"isBackground": false,
+			"presentation": {
+				"echo": false,
+				"panel": "dedicated",
+				"showReuseMessage": false
+			},
+
+			"problemMatcher": []
+		},
+
+		{
+			"label": "NPM: Install development dependencies",
+			"icon": {
+				"id": "package",
+				"color": "terminal.ansiRed"
+			},
+
+			"type": "shell",
+			"command": "npm i --save-dev ${input:packages}",
+
+			"isBackground": false,
+			"presentation": {
+				"echo": false,
+				"panel": "dedicated",
+				"showReuseMessage": false
+			},
+
+			"problemMatcher": []
+		},
+
+		{
+			"label": "NPM: Uninstall dependencies",
+			"icon": {
+				"id": "trash",
+				"color": "terminal.ansiRed"
+			},
+
+			"type": "shell",
+			"command": "npm un ${input:delPackages}",
+
+			"isBackground": false,
+			"presentation": {
+				"echo": false,
+				"panel": "dedicated",
+				"showReuseMessage": false
+			},
+
+			"problemMatcher": []
+		},
+
+		{
+			"label": "System: Delete permanently...",
+			"icon": {
+				"id": "trashcan"
+			},
+
+			"type": "shell",
+			"command": "rm -rf ${input:delFiles}",
+
+			"isBackground": false,
+			"presentation": {
+				"echo": false,
+				"panel": "dedicated",
+				"showReuseMessage": false
+			},
+
+			"problemMatcher": []
+		}
+	],
+
+	"inputs": [
+		{
+			"id": "packages",
+			"description": "Dependencies to install",
+			"type": "promptString"
+		},
+
+		{
+			"id": "localPackages",
+			"description": "Local dependencies to link",
+			"type": "promptString"
+		},
+
+		{
+			"id": "delPackages",
+			"description": "Dependencies to uninstall",
+			"type": "promptString"
+		},
+
+		{
+			"id": "delFiles",
+			"description": "Files or directories to delete",
+			"type": "promptString"
 		}
 	]
 }
