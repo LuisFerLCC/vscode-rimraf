@@ -10,7 +10,8 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:vscode-rimraf.helloWorld"
+		"onCommand:vscode-rimraf.helloWorld",
+		"onView:testTreeView"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
@@ -19,7 +20,15 @@
 				"command": "vscode-rimraf.helloWorld",
 				"title": "Hello World"
 			}
-		]
+		],
+		"views": {
+			"explorer": [
+				{
+					"id": "testTreeView",
+					"name": "Test tree view"
+				}
+			]
+		}
 	},
 	"scripts": {
 		"build": "npm run format && tsc",

@@ -14,5 +14,6 @@ tsconfig*.json
 .eslintrc.js
 .prettierrc
 .prettierignore
+.editorconfig
 /.vscode
 /.vscode-test
