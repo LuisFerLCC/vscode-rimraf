@@ -8,7 +8,7 @@
 			"type": "extensionHost",
 			"request": "launch",
 			"args": ["--extensionDevelopmentPath=${workspaceFolder}"],
-			"preLaunchTask": "TypeScript: Compile (Watch Mode)",
+			"preLaunchTask": "Rollup: Compile (Watch Mode)",
 
 			"outFiles": ["${workspaceFolder}/dist/**/*.js"],
 			"sourceMaps": true
@@ -23,7 +23,7 @@
 				"--extensionDevelopmentPath=${workspaceFolder}",
 				"--extensionTestsPath=${workspaceFolder}/dist/__test__/suite/index"
 			],
-			"preLaunchTask": "TypeScript: Compile",
+			"preLaunchTask": "Rollup: Compile",
 
 			"outFiles": ["${workspaceFolder}/dist/runTest.js", "${workspaceFolder}/dist/__test__/**/*.js"],
 			"sourceMaps": true

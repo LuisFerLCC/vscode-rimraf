@@ -5,8 +5,7 @@
 /dist/**/*.js.map
 
 # testing and coverage
-/dist/runTest.js
-/dist/__test__
+/dist.test
 /coverage
 
 # config

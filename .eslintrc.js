@@ -7,6 +7,7 @@ module.exports = {
 	root: true,
 	env: {
 		es6: true,
+		node: true,
 	},
 
 	extends: [
@@ -23,7 +24,7 @@ module.exports = {
 		sourceType: "module",
 		ecmaVersion: "latest",
 	},
-	ignorePatterns: ["/dist/**/*", "/coverage/**/*"],
+	ignorePatterns: ["/dist/**/*", "/dist.test/**/*", "/coverage/**/*"],
 	plugins: ["@typescript-eslint", "import"],
 
 	rules: {
@@ -61,19 +62,4 @@ module.exports = {
 			},
 		],
 	},
-
-	overrides: [
-		{
-			files: [".eslintrc.js"],
-
-			env: {
-				es6: true,
-				node: true,
-			},
-
-			rules: {
-				"@typescript-eslint/explicit-function-return-type": "off",
-			},
-		},
-	],
 };

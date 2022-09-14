@@ -3,10 +3,10 @@
 
 	"tasks": [
 		{
-			"label": "TypeScript: Compile",
+			"label": "Rollup: Compile",
 			"icon": {
 				"id": "archive",
-				"color": "terminal.ansiBlue"
+				"color": "terminal.ansiRed"
 			},
 
 			"type": "npm",
@@ -27,10 +27,10 @@
 		},
 
 		{
-			"label": "TypeScript: Compile (Watch Mode)",
+			"label": "Rollup: Compile (Watch Mode)",
 			"icon": {
 				"id": "search",
-				"color": "terminal.ansiBlue"
+				"color": "terminal.ansiRed"
 			},
 
 			"type": "npm",
@@ -44,7 +44,23 @@
 				"showReuseMessage": false
 			},
 
-			"problemMatcher": ["$eslint-compact", "$tsc-watch"]
+			"problemMatcher": [
+				"$eslint-compact",
+				{
+					"base": "$tsc-watch",
+
+					"background": {
+						"activeOnStart": true,
+
+						"beginsPattern": {
+							"regexp": "(.*?)"
+						},
+						"endsPattern": {
+							"regexp": "\\[\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}\\] waiting for changes..."
+						}
+					}
+				}
+			]
 		},
 
 		{
