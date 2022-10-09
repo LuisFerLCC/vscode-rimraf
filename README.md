@@ -40,6 +40,8 @@ While VSCode Rimraf is enabled, deleting files from the VSCode GUI will delete t
 -   `vscode-rimraf.toggle` **VSCode Rimraf: Toggle extension** Toggles (enables or disables) the extension. It is reset when opening
     a new window.
 -   `vscode-rimraf.empty-trash` **VSCode Rimraf: Empty the trash** Empties the trash.
+-   `vscode-rimraf.save-logs` **VSCode Rimraf: Save debug log file** After execution, the extension will automatically save the logs
+    generated in the output channel.
 
 ## Support
 

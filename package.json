@@ -1,6 +1,6 @@
 {
 	"name": "vscode-rimraf",
-	"displayName": "VSCode Rimraf",
+	"displayName": "VSCode Rimraf: Delete files permanently",
 	"description": "Permanently delete files and folders (like `npx rimraf` or `rm -rf`) directly from the VSCode GUI.",
 	"version": "1.0.0",
 	"author": "LuisFerLCC",
@@ -11,6 +11,13 @@
 	},
 	"categories": [
 		"Other"
+	],
+	"keywords": [
+		"fs",
+		"delete",
+		"file",
+		"files",
+		"rimraf"
 	],
 	"activationEvents": [
 		"onCommand:vscode-rimraf.toggle",
