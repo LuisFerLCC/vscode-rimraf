@@ -3,6 +3,7 @@
 
 # production
 /dist
+*.vsix
 
 # testing and coverage
 /dist.test

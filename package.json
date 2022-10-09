@@ -1,98 +1,111 @@
 {
-  "name": "vscode-rimraf",
-  "displayName": "VSCode rimraf",
-  "description": "Permanently delete files and folders (like `npx rimraf` or `rm -rf`) directly from the VSCode GUI.",
-  "version": "1.0.0",
-  "author": "LuisFerLCC",
-  "publisher": "luisferlcc",
-  "icon": "./media/vscode-rimraf-icon.png",
-  "engines": {
-    "vscode": "^1.70.0"
-  },
-  "categories": [
-    "Other"
-  ],
-  "activationEvents": [
-    "*"
-  ],
-  "main": "./dist/extension.js",
-  "contributes": {
-    "commands": [
-      {
-        "command": "vscode-rimraf.toggle",
-        "title": "VSCode Rimraf: Toggle extension"
-      }
-    ],
-    "configuration": {
-      "title": "VSCode Rimraf",
-      "properties": {
-        "vscodeRimraf.defaultState": {
-          "type": "string",
-          "enum": [
-            "enabled",
-            "disabled",
-            "prompt"
-          ],
-          "enumDescriptions": [
-            "Enables the extension by default.",
-            "Disables the extension by default.",
-            "Shows a prompt to the user on startup to manually enable or disable the extension."
-          ],
-          "default": "prompt",
-          "description": "Whether the extension is enabled or disabled by default, or defined by the user through a prompt on startup."
-        }
-      }
-    }
-  },
-  "capabilities": {
-    "virtualWorkspaces": {
-      "supported": false,
-      "description": "VSCode does not move files to the trash in virtual workspaces."
-    },
-    "untrustedWorkspaces": {
-      "supported": true
-    }
-  },
-  "scripts": {
-    "build": "npm run format && rollup -c rollup.config.ts --configPlugin typescript",
-    "build:watch": "npm run format && rollup -c rollup.config.ts --configPlugin typescript --watch",
-    "test": "node ./dist/runTest.js",
-    "pretest": "tsc -p tsconfig.test.json",
-    "vscode:prepublish": "npm run build",
-    "format": "prettier --write . && eslint --ext .js,.ts --fix ."
-  },
-  "devDependencies": {
-    "@rollup/plugin-commonjs": "^22.0.2",
-    "@rollup/plugin-node-resolve": "^14.1.0",
-    "@rollup/plugin-typescript": "^8.5.0",
-    "@types/eslint": "^8.4.6",
-    "@types/glob": "^8.0.0",
-    "@types/mocha": "^10.0.0",
-    "@types/node": "^18.8.2",
-    "@types/vscode": "^1.71.0",
-    "@typescript-eslint/eslint-plugin": "^5.39.0",
-    "@typescript-eslint/parser": "^5.39.0",
-    "@vscode/test-electron": "^2.1.5",
-    "empty-trash": "^4.0.0",
-    "eslint": "^8.24.0",
-    "eslint-config-google": "^0.14.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "glob": "^8.0.3",
-    "mocha": "^10.0.0",
-    "prettier": "^2.7.1",
-    "rollup": "^2.79.1",
-    "rollup-plugin-copy": "^3.4.0",
-    "rollup-plugin-terser": "^7.0.2",
-    "typescript": "^4.8.4"
-  },
-  "repository": {
-    "url": "https://github.com/LuisFerLCC/vscode-rimraf"
-  },
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/LuisFerLCC/vscode-rimraf/issues"
-  },
-  "homepage": "https://github.com/LuisFerLCC/vscode-rimraf#readme"
+	"name": "vscode-rimraf",
+	"displayName": "VSCode Rimraf",
+	"description": "Permanently delete files and folders (like `npx rimraf` or `rm -rf`) directly from the VSCode GUI.",
+	"version": "1.0.0",
+	"author": "LuisFerLCC",
+	"publisher": "luisferlcc",
+	"icon": "media/vscode-rimraf-icon.png",
+	"engines": {
+		"vscode": "^1.70.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:vscode-rimraf.toggle",
+		"onCommand:vscode-rimraf.empty-trash",
+		"onCommand:vscode-rimraf.save-logs",
+		"onCommand:deleteFile",
+		"onCommand:moveFileToTrash",
+		"onStartupFinished"
+	],
+	"main": "./dist/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "vscode-rimraf.toggle",
+				"title": "VSCode Rimraf: Toggle extension"
+			},
+			{
+				"command": "vscode-rimraf.empty-trash",
+				"title": "VSCode Rimraf: Empty the trash"
+			},
+			{
+				"command": "vscode-rimraf.save-logs",
+				"title": "VSCode Rimraf: Save debug log file"
+			}
+		],
+		"configuration": {
+			"title": "VSCode Rimraf",
+			"properties": {
+				"vscodeRimraf.defaultState": {
+					"type": "string",
+					"enum": [
+						"enabled",
+						"disabled",
+						"prompt"
+					],
+					"enumDescriptions": [
+						"Enables the extension by default.",
+						"Disables the extension by default.",
+						"Shows a prompt to the user on startup to manually enable or disable the extension."
+					],
+					"default": "prompt",
+					"description": "Whether the extension is enabled or disabled by default, or defined by the user through a prompt on startup."
+				}
+			}
+		}
+	},
+	"capabilities": {
+		"virtualWorkspaces": {
+			"supported": false,
+			"description": "VSCode does not move files to the trash in virtual workspaces."
+		},
+		"untrustedWorkspaces": {
+			"supported": true
+		}
+	},
+	"scripts": {
+		"build": "npm run format && rollup -c rollup.config.ts --configPlugin typescript",
+		"build:watch": "npm run format && rollup -c rollup.config.ts --configPlugin typescript --watch",
+		"test": "node ./dist/runTest.js",
+		"pretest": "tsc -p tsconfig.test.json",
+		"vscode:prepublish": "npm run build",
+		"format": "prettier --write . && eslint --ext .js,.ts --fix ."
+	},
+	"devDependencies": {
+		"@rollup/plugin-commonjs": "^22.0.2",
+		"@rollup/plugin-node-resolve": "^14.1.0",
+		"@rollup/plugin-typescript": "^8.5.0",
+		"@types/eslint": "^8.4.6",
+		"@types/glob": "^8.0.0",
+		"@types/mocha": "^10.0.0",
+		"@types/node": "^18.8.2",
+		"@types/vscode": "^1.70.0",
+		"@typescript-eslint/eslint-plugin": "^5.39.0",
+		"@typescript-eslint/parser": "^5.39.0",
+		"@vscode/test-electron": "^2.1.5",
+		"empty-trash": "^4.0.0",
+		"eslint": "^8.24.0",
+		"eslint-config-google": "^0.14.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-import": "^2.26.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"glob": "^8.0.3",
+		"mocha": "^10.0.0",
+		"prettier": "^2.7.1",
+		"rollup": "^2.79.1",
+		"rollup-plugin-copy": "^3.4.0",
+		"rollup-plugin-terser": "^7.0.2",
+		"typescript": "^4.8.4"
+	},
+	"repository": {
+		"url": "https://github.com/LuisFerLCC/vscode-rimraf"
+	},
+	"license": "Apache-2.0",
+	"bugs": {
+		"url": "https://github.com/LuisFerLCC/vscode-rimraf/issues"
+	},
+	"homepage": "https://github.com/LuisFerLCC/vscode-rimraf#readme"
 }

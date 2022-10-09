@@ -122,110 +122,13 @@
 			},
 
 			"problemMatcher": []
-		},
-
-		{
-			"label": "NPM: Install dependencies",
-			"icon": {
-				"id": "package",
-				"color": "terminal.ansiRed"
-			},
-
-			"type": "shell",
-			"command": "npm i ${input:packages}",
-
-			"isBackground": false,
-			"presentation": {
-				"echo": false,
-				"panel": "dedicated",
-				"showReuseMessage": false
-			},
-
-			"problemMatcher": []
-		},
-
-		{
-			"label": "NPM: Install development dependencies",
-			"icon": {
-				"id": "package",
-				"color": "terminal.ansiRed"
-			},
-
-			"type": "shell",
-			"command": "npm i --save-dev ${input:packages}",
-
-			"isBackground": false,
-			"presentation": {
-				"echo": false,
-				"panel": "dedicated",
-				"showReuseMessage": false
-			},
-
-			"problemMatcher": []
-		},
-
-		{
-			"label": "NPM: Uninstall dependencies",
-			"icon": {
-				"id": "trash",
-				"color": "terminal.ansiRed"
-			},
-
-			"type": "shell",
-			"command": "npm un ${input:delPackages}",
-
-			"isBackground": false,
-			"presentation": {
-				"echo": false,
-				"panel": "dedicated",
-				"showReuseMessage": false
-			},
-
-			"problemMatcher": []
-		},
-
-		{
-			"label": "System: Delete permanently...",
-			"icon": {
-				"id": "trashcan"
-			},
-
-			"type": "shell",
-			"command": "rm -rf ${input:delFiles}",
-
-			"isBackground": false,
-			"presentation": {
-				"echo": false,
-				"panel": "dedicated",
-				"showReuseMessage": false
-			},
-
-			"problemMatcher": []
 		}
 	],
 
 	"inputs": [
 		{
-			"id": "packages",
-			"description": "Dependencies to install",
-			"type": "promptString"
-		},
-
-		{
 			"id": "localPackages",
 			"description": "Local dependencies to link",
-			"type": "promptString"
-		},
-
-		{
-			"id": "delPackages",
-			"description": "Dependencies to uninstall",
-			"type": "promptString"
-		},
-
-		{
-			"id": "delFiles",
-			"description": "Files or directories to delete",
 			"type": "promptString"
 		}
 	]

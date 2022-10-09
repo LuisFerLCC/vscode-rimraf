@@ -1,0 +1,89 @@
+name: Bug Report
+description: Is the extension not working as intended?
+title: BUG - (brief description)
+labels:
+  - 🐞 Bug
+assignees: LuisFerLCC
+
+body:
+  - type: markdown
+    attributes:
+      value: <h1 align="center">Bug Report</h1>
+
+  - type: input
+    id: extension-version
+    attributes:
+      label: Extension version
+      description: Which extension version are you using? You can check it in the Extensions panel.
+      placeholder: X.X.X
+    validations:
+      required: true
+
+  - type: dropdown
+    id: dependency-issue
+    attributes:
+      label: Dependency-related issue
+      description: Is the issue caused by or correlated to one of the dependencies?
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: |
+        Please describe the bug and how to reproduce it in as much detail as possible.
+        You can also attach images or log files here.
+      placeholder: |
+        Steps to reproduce:
+        1.
+        2.
+        3.
+        ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How critical is this bug? (please be realistic)
+      options:
+        - Minor bug (annoying, but not crucially broken)
+        - Medium bug (needs attention)
+        - Major bug (must be fixed immediately)
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: contribution-guidelines
+    attributes:
+      label: Contribution guidelines
+      description: By submitting this issue, you agree that...
+      options:
+        - label: This is a bug, not you [asking for support](https://github.com/luisferlcc/vscode-rimraf/discussions/categories/q-a).
+          required: true
+        - label: The issue has not already been reported.
+          required: true
+        - label:
+            You are following the project's [Code of
+            Conduct](https://github.com/luisferlcc/vscode-rimraf/blob/master/.github/CODE_OF_CONDUCT.md) and [contribution
+            guidelines](https://github.com/luisferlcc/vscode-rimraf/blob/master/.github/CONTRIBUTING.md).
+          required: true

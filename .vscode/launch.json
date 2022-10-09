@@ -21,7 +21,7 @@
 			"request": "launch",
 			"args": [
 				"--extensionDevelopmentPath=${workspaceFolder}",
-				"--extensionTestsPath=${workspaceFolder}/dist/__test__/suite/index"
+				"--extensionTestsPath=${workspaceFolder}/dist.test/__test__/index"
 			],
 			"preLaunchTask": "Rollup: Compile",
 

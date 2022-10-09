@@ -4,6 +4,8 @@
 		"editorconfig.editorconfig",
 		"github.vscode-pull-request-github",
 		"eamodio.gitlens",
-		"esbenp.prettier-vscode"
+		"esbenp.prettier-vscode",
+		"redhat.vscode-yaml",
+		"idered.npm"
 	]
 }

@@ -1,0 +1,6 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: Support
+    url: https://github.com/luisferlcc/vscode-rimraf/discussions/categories/q-a
+    about: Need help? Ask on GitHub discussions!

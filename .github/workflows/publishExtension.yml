@@ -1,0 +1,56 @@
+name: Publish VSCode Extension
+
+on:
+  push:
+    branches:
+      - stable
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build extension
+    runs-on: ubuntu-latest
+    if: github.repository_owner == 'luisferlcc'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Upload dist artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist
+          path: dist
+
+  publish:
+    name: Publish extension
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Download dist artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: dist
+          path: dist
+
+      - name: Publish on Open VSX Registry
+        uses: HaaLeo/publish-vscode-extension@v1
+        with:
+          pat: ${{ secrets.OPEN_VSX_TOKEN }}
+
+      - name: Publish on VS Marketplace
+        uses: HaaLeo/publish-vscode-extension@v1
+        with:
+          pat: ${{ secrets.VS_MARKETPLACE_TOKEN }}
+          registryUrl: https://marketplace.visualstudio.com/

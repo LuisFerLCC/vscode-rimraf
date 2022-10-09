@@ -1,0 +1,64 @@
+name: Feature Request
+description: Do you have a suggestion or an idea for a new feature?
+title: SUGGESTION - (brief description)
+labels:
+  - ✨ Enhancement
+assignees: LuisFerLCC
+
+body:
+  - type: markdown
+    attributes:
+      value: <h1 align="center">Feature Request</h1>
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: |
+        Please describe the suggestion in as much detail as possible.
+        You can also attach images or text files here.
+      placeholder: |
+        This new feature would be very welcome...
+        The lack of ___ is frustrating...
+        ___ should behave like this instead...
+    validations:
+      required: true
+
+  - type: textarea
+    id: example-use-cases
+    attributes:
+      label: Example use cases
+      description: When and where would this feature be useful?
+      placeholder: This would be useful in situations where...
+    validations:
+      required: true
+
+  - type: textarea
+    id: other-alternatives
+    attributes:
+      label: Other alternatives
+      description: Have you considered any other possible approaches?
+
+  - type: checkboxes
+    id: contribution-guidelines
+    attributes:
+      label: Contribution guidelines
+      description: By submitting this issue, you agree that...
+      options:
+        - label:
+            This is a suggestion, not you [asking for
+            support](https://github.com/luisferlcc/vscode-rimraf/discussions/categories/q-a).
+          required: true
+        - label: This feature doesn't already exist.
+          required: true
+        - label: The issue has not already been suggested.
+          required: true
+        - label: This new feature will not break any existing code.
+          required: true
+        - label: This feature fits with VSCode Rimraf's philosophy and goals.
+          required: true
+        - label:
+            You are following the project's [Code of
+            Conduct](https://github.com/luisferlcc/vscode-rimraf/blob/master/.github/CODE_OF_CONDUCT.md) and [contribution
+            guidelines](https://github.com/luisferlcc/vscode-rimraf/blob/master/.github/CONTRIBUTING.md).
+          required: true

@@ -1,74 +1,63 @@
-# vscode-rimraf README
+<div align="center">
 
-This is the README for your extension "vscode-rimraf". After writing up a brief description, we recommend including the following
-sections.
+# VSCode Rimraf
 
-## Features
+[![VSCode marketplace latest version](https://img.shields.io/visual-studio-marketplace/v/luisferlcc.vscode-rimraf?color=blue&logo=visualstudiocode&logoColor=27b4f4)](https://marketplace.visualstudio.com/items?itemName=luisferlcc.vscode-rimraf)
+[![VS Marketplace installs](https://img.shields.io/visual-studio-marketplace/i/luisferlcc.vscode-rimraf?label=installs&logo=visualstudiocode&logoColor=27b4f4)](https://marketplace.visualstudio.com/items?itemName=luisferlcc.vscode-rimraf)
+[![Contributor Covenant Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-2.1-5e0d73)](https://github.com/luisferlcc/vscode-rimraf/blob/master/.github/CODE_OF_CONDUCT.md)
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this
-README file.
+</div>
 
-For example if there is an image subfolder under your extension project workspace:
+**VSCode Rimraf** allows you to permanently delete files and folders (similarly to `rm -rf` or `npx rimraf` in the terminal) directly
+from the Visual Studio Code GUI.
 
-\!\[feature X\]\(images/feature-x.png\)
+## Get started
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused
-> animations that are easy to follow.
+### Installation
 
-## Requirements
+Install the extension from the VS Marketplace or by typing this in the Command Palette:
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+```sh-session
+ext install luisferlcc.vscode-rimraf
+```
 
-## Extension Settings
+Next, you will see a dialog box warning you that enabling the extension will empty the trash.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+<div align="center">
+	<img src="https://raw.githubusercontent.com/luisferlcc/vscode-rimraf/HEAD/media/warning.jpg" alt="Trash warning" width="500">
+</div>
 
-For example:
+Make sure to restore any important files in the trash, and then click _Enable_. VSCode Rimraf is now set up.
 
-This extension contributes the following settings:
+### Usage
 
--   `myExtension.enable`: Enable/disable this extension.
--   `myExtension.thing`: Set to `blah` to do something.
+While VSCode Rimraf is enabled, deleting files from the VSCode GUI will delete them permanently instead of moving them to the trash.
 
-## Known Issues
+![Extension usage](https://raw.githubusercontent.com/luisferlcc/vscode-rimraf/HEAD/media/get-started.gif)
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+## Commands
 
-## Release Notes
+-   `vscode-rimraf.toggle` **VSCode Rimraf: Toggle extension** Toggles (enables or disables) the extension. It is reset when opening
+    a new window.
+-   `vscode-rimraf.empty-trash` **VSCode Rimraf: Empty the trash** Empties the trash.
 
-Users appreciate release notes as you update your extension.
+## Support
 
-### 1.0.0
+Need help using VSCode Rimraf? Don't hesitate to reach out on
+[GitHub Discussions](https://github.com/luisferlcc/vscode-rimraf/discussions/categories/q-a)!
 
-Initial release of ...
+## Links
 
-### 1.0.1
+-   [GitHub](https://github.com/luisferlcc/vscode-rimraf)
+-   [VS Marketplace](https://marketplace.visualstudio.com/items?itemName=luisferlcc.vscode-rimraf)
 
-Fixed issue #.
+## Contributing
 
-### 1.1.0
+Before creating an issue, please consider the following:
 
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
--   [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
--   Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
--   Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
--   Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
--   [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
--   [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+-   Make sure the issue hasn't already been reported or suggested.
+-   After following these steps, you can file an issue using one of our
+    [templates](https://github.com/luisferlcc/vscode-rimraf/issues/new/choose). Please make sure to follow our
+    [Code of Conduct](https://github.com/luisferlcc/vscode-rimraf/blob/master/.github/CODE_OF_CONDUCT.md).
+-   If you wish to [submit a pull request](https://github.com/luisferlcc/vscode-rimraf/compare) alongside your issue, please follow
+    our [contribution guidelines](https://github.com/luisferlcc/vscode-rimraf/blob/master/.github/CONTRIBUTING.md).

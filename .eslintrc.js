@@ -53,6 +53,7 @@ module.exports = {
 		"prefer-promise-reject-errors": "off",
 		"require-jsdoc": "off",
 		"valid-jsdoc": "off",
+		"no-inner-declarations": "off",
 
 		"prettier/prettier": [
 			"warn",

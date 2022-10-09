@@ -1,0 +1,107 @@
+- name: 💣 Breaking change
+  description: Unintended change that breaks existing behavior
+  color: "f79f34"
+
+- name: 🐞 Bug
+  description: Not working as intended
+  color: "d73a4a"
+
+- name: 💻 Dependencies
+  description: PRs that update production dependencies
+  color: "155e8c"
+
+- name: 💻 Dev Dependencies
+  description: PRs that update development dependencies
+  color: "155e8c"
+
+- name: 💬 Discussion
+  description: This issue or PR is currently being discussed on
+  color: "6da082"
+
+- name: 🔃 Duplicate
+  description: This issue or PR already exists
+  color: "cfd3d7"
+
+- name: ✨ Enhancement
+  description: New feature or request
+  color: "a2eeef"
+
+- name: 👍 Good first issue
+  description: Good for newcomers
+  color: "7057ff"
+
+- name: 👍 Good first PR
+  description: Good for newcomers
+  color: "7057ff"
+
+- name: 🖋️ Has a PR
+  description: This issue has a corresponding PR
+  color: "5319e7"
+
+- name: ↪️ Has a workaround
+  description: A different path can be taken to get the expected result
+  color: "bfd4f2"
+
+- name: ❔ Help wanted
+  description: Further support is needed
+  color: "88eb95"
+
+- name: 🚫 Invalid
+  description: This doesn't seem right
+  color: "e4e669"
+
+- name: 🔴 Major bug
+  description: Severely affects most use cases
+  color: "e99695"
+
+- name: 🟡 Medium bug
+  description: Affects several use cases
+  color: "fef2c0"
+
+- name: 🟢 Minor bug
+  description: Only affects a very specific use case
+  color: "c2e0c6"
+
+- name: ❌ Needs rebase
+  description: There is a merge conflict
+  color: "261542"
+
+- name: 🧪 Needs tests
+  description: Unit testing is needed
+  color: "c23675"
+
+- name: 🍰 Nice to have
+  description: Unintended behavior, but useful
+  color: "c5def5"
+
+- name: ⏳ On hold
+  description: Development on this issue has been suspended
+  color: "d4c5f9"
+
+- name: ✅ Ready to merge
+  description: This PR is ready to be merged
+  color: "0ff40b"
+
+- name: 🛡️ Security
+  description: Security or privacy concern
+  color: "b60205"
+
+- name: 🧪 Tests
+  description: Improvements or additions to unit tests
+  color: "9f2d60"
+
+- name: ⚙️ Unreproducible
+  description: The bug cannot be reproduced
+  color: "808080"
+
+- name: 🔥 Urgent
+  description: Needs to be fixed ASAP
+  color: "ff7b00"
+
+- name: 🗑️ Won't fix
+  description: This will not be worked on
+  color: "ffffff"
+
+- name: 🆗 Working as intended
+  description: This is the intended behavior
+  color: "ebd534"
