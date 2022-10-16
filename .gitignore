@@ -5,10 +5,6 @@
 /dist
 *.vsix
 
-# testing and coverage
-/dist.test
-/coverage
-
 # IDEs and editors
 /.idea
 .project
@@ -30,5 +26,5 @@
 .DS_Store
 
 # misc
-npm-debug.log
-yarn-error.log
+*-debug.log
+*-error.log

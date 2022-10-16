@@ -1,18 +1,14 @@
 # source
-/src
-/.github
-.gitignore
-/dist/**/*.js.map
-
-# testing and coverage
-/dist.test
-/coverage
+src/**
+dist/**/*.js.map
 
 # config
 tsconfig*.json
 .eslintrc.js
+.gitignore
 .prettierrc
 .prettierignore
 .editorconfig
-/.vscode
-/.vscode-test
+rollup.config.ts
+.github/**
+.vscode/**

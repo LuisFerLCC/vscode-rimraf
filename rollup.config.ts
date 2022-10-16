@@ -10,7 +10,6 @@ export default <RollupOptions>{
 
 	output: {
 		file: "./dist/extension.js",
-		name: "Extension bundle",
 
 		format: "commonjs",
 		sourcemap: true,

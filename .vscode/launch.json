@@ -10,23 +10,7 @@
 			"args": ["--extensionDevelopmentPath=${workspaceFolder}"],
 			"preLaunchTask": "Rollup: Compile (Watch Mode)",
 
-			"outFiles": ["${workspaceFolder}/dist/**/*.js"],
-			"sourceMaps": true
-		},
-
-		{
-			"name": "Run all tests",
-
-			"type": "extensionHost",
-			"request": "launch",
-			"args": [
-				"--extensionDevelopmentPath=${workspaceFolder}",
-				"--extensionTestsPath=${workspaceFolder}/dist.test/__test__/index"
-			],
-			"preLaunchTask": "Rollup: Compile",
-
-			"outFiles": ["${workspaceFolder}/dist/runTest.js", "${workspaceFolder}/dist/__test__/**/*.js"],
-			"sourceMaps": true
+			"outFiles": ["${workspaceFolder}/dist/**/*.js"]
 		}
 	]
 }

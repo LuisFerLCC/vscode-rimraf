@@ -24,7 +24,7 @@ module.exports = {
 		sourceType: "module",
 		ecmaVersion: "latest",
 	},
-	ignorePatterns: ["/dist/**/*", "/dist.test/**/*", "/coverage/**/*"],
+	ignorePatterns: ["/dist/**/*"],
 	plugins: ["@typescript-eslint", "import"],
 
 	rules: {

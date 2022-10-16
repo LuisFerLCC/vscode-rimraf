@@ -1,5 +1,4 @@
 {
-	"cSpell.words": ["Codecov", "eeef", "ghaction", "luisferlcc", "Rimraf's", "treeshake"],
 	"yaml.schemas": {
 		"https://json.schemastore.org/github-issue-config.json": "file:///d%3A/WebDev/VSCode%20Extensions/vscode-rimraf/.github/ISSUE_TEMPLATE/config.yml"
 	}

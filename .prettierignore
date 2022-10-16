@@ -3,7 +3,3 @@
 
 # production and docs
 /dist
-
-# testing and coverage
-/dist.test
-/coverage

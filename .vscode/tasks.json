@@ -50,7 +50,7 @@
 					"base": "$tsc-watch",
 
 					"background": {
-						"activeOnStart": true,
+						"activeOnStart": false,
 
 						"beginsPattern": {
 							"regexp": "(.*?)"
@@ -73,7 +73,11 @@
 			"type": "npm",
 			"script": "test",
 
-			"isBackground": true,
+			"isBackground": false,
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
 			"presentation": {
 				"echo": false,
 				"panel": "dedicated",
