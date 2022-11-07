@@ -5,6 +5,11 @@
 /dist
 *.vsix
 
+# bun (not production ready)
+bun.lockb
+bunfig.toml
+node_modules.bun
+
 # IDEs and editors
 /.idea
 .project

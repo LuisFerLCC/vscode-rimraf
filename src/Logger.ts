@@ -29,7 +29,7 @@ namespace Logger {
 
 		if (!rootDirectory) return;
 
-		if (!_logFileUri) _logFileUri = Uri.file(`${rootDirectory.fsPath}\\vscode-rimraf.debug.log`);
+		if (!_logFileUri) _logFileUri = Uri.file(`${rootDirectory.path}/vscode-rimraf.debug.log`);
 		if (_saveLogs) _fs.writeFile(_logFileUri, Buffer.from(_lines.join("\r\n")));
 	}
 

@@ -86,7 +86,9 @@ export async function activate(context: ExtensionContext): Promise<void> {
 			}
 
 			Logger.save();
-			return window.showInformationMessage(`Debug logs will be saved at "${Logger.rootDirectory}\\vscode-rimraf-debug.log".`);
+			return window.showInformationMessage(
+				`Debug logs will be saved at "${Logger.rootDirectory.path}/vscode-rimraf-debug.log".`
+			);
 		})
 	);
 

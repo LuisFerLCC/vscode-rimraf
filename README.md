@@ -4,6 +4,7 @@
 
 [![VSCode marketplace latest version](https://img.shields.io/visual-studio-marketplace/v/luisferlcc.vscode-rimraf?color=blue&logo=visualstudiocode&logoColor=27b4f4)](https://marketplace.visualstudio.com/items?itemName=luisferlcc.vscode-rimraf)
 [![VS Marketplace installs](https://img.shields.io/visual-studio-marketplace/i/luisferlcc.vscode-rimraf?label=installs&logo=visualstudiocode&logoColor=27b4f4)](https://marketplace.visualstudio.com/items?itemName=luisferlcc.vscode-rimraf)
+[![Open VSX](https://img.shields.io/badge/Open%20VSX-open--vsx.org-%23c160ef)](https://open-vsx.org/extension/luisferlcc/vscode-rimraf)
 [![Contributor Covenant Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-2.1-5e0d73)](https://github.com/luisferlcc/vscode-rimraf/blob/master/.github/CODE_OF_CONDUCT.md)
 
 </div>
@@ -52,6 +53,7 @@ Need help using VSCode Rimraf? Don't hesitate to reach out on
 
 -   [GitHub](https://github.com/luisferlcc/vscode-rimraf)
 -   [VS Marketplace](https://marketplace.visualstudio.com/items?itemName=luisferlcc.vscode-rimraf)
+-   [Open VSX](https://open-vsx.org/extension/luisferlcc/vscode-rimraf)
 
 ## Contributing
 
