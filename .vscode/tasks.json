@@ -3,10 +3,10 @@
 
 	"tasks": [
 		{
-			"label": "Rollup: Compile",
+			"label": "ESBuild: Compile",
 			"icon": {
 				"id": "archive",
-				"color": "terminal.ansiRed"
+				"color": "terminal.ansiYellow"
 			},
 
 			"type": "npm",
@@ -27,10 +27,10 @@
 		},
 
 		{
-			"label": "Rollup: Compile (Watch Mode)",
+			"label": "ESBuild: Compile (Watch Mode)",
 			"icon": {
 				"id": "search",
-				"color": "terminal.ansiRed"
+				"color": "terminal.ansiYellow"
 			},
 
 			"type": "npm",
@@ -47,17 +47,14 @@
 			"problemMatcher": [
 				"$eslint-compact",
 				{
-					"base": "$tsc-watch",
+					"owner": "node",
+					"source": "esbuild",
+					"applyTo": "closedDocuments",
+					"base": "$eslint-compact",
 
 					"background": {
-						"activeOnStart": false,
-
-						"beginsPattern": {
-							"regexp": "(.*?)"
-						},
-						"endsPattern": {
-							"regexp": "\\[\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}\\] waiting for changes..."
-						}
+						"beginsPattern": { "regexp": ">" },
+						"endsPattern": { "regexp": "ESBuild is active" }
 					}
 				}
 			]

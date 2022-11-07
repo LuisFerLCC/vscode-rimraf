@@ -9,6 +9,6 @@ tsconfig*.json
 .prettierrc
 .prettierignore
 .editorconfig
-rollup.config.ts
+scripts/**
 .github/**
 .vscode/**

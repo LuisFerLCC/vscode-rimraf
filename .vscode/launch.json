@@ -8,7 +8,7 @@
 			"type": "extensionHost",
 			"request": "launch",
 			"args": ["--extensionDevelopmentPath=${workspaceFolder}"],
-			"preLaunchTask": "Rollup: Compile (Watch Mode)",
+			"preLaunchTask": "ESBuild: Compile (Watch Mode)",
 
 			"outFiles": ["${workspaceFolder}/dist/**/*.js"]
 		}

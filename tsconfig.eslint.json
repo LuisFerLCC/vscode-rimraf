@@ -1,5 +1,5 @@
 {
 	"extends": "./tsconfig.json",
 
-	"include": ["./src/**/*.ts", "./rollup.config.ts", ".eslintrc.js"]
+	"include": ["./src/**/*.ts", "./scripts/**/*.mjs", ".eslintrc.js"]
 }
