@@ -43,6 +43,23 @@
 				"title": "VSCode Rimraf: Save debug log file"
 			}
 		],
+		"keybindings": [
+			{
+				"key": "delete",
+				"command": "-deleteFile",
+				"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceMoveableToTrash && !explorerResourceReadonly && !inputFocus"
+			},
+			{
+				"key": "delete",
+				"command": "moveFileToTrash",
+				"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+			},
+			{
+				"key": "delete",
+				"command": "-moveFileToTrash",
+				"when": "explorerResourceMoveableToTrash && explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+			}
+		],
 		"configuration": {
 			"title": "VSCode Rimraf",
 			"properties": {
@@ -82,10 +99,10 @@
 	"devDependencies": {
 		"@sprout2000/esbuild-copy-plugin": "^1.1.2",
 		"@types/eslint": "^8.4.10",
-		"@types/node": "^16.11.26",
-		"@types/vscode": "^1.70.0",
-		"@typescript-eslint/eslint-plugin": "^5.42.0",
-		"@typescript-eslint/parser": "^5.42.0",
+		"@types/node": "16.11.26",
+		"@types/vscode": "1.70.0",
+		"@typescript-eslint/eslint-plugin": "^5.42.1",
+		"@typescript-eslint/parser": "^5.42.1",
 		"empty-trash": "^4.0.0",
 		"esbuild": "^0.15.13",
 		"eslint": "^8.27.0",

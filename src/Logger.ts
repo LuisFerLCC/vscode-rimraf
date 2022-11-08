@@ -1,3 +1,4 @@
+import { existsSync } from "fs";
 import { Uri, window, workspace } from "vscode";
 
 namespace Logger {
@@ -63,7 +64,7 @@ namespace Logger {
 	export function clear(): void {
 		refresh();
 
-		if (_logFileUri) _fs.delete(_logFileUri);
+		if (_logFileUri && existsSync(_logFileUri.path)) _fs.delete(_logFileUri);
 		_outputChannel.clear();
 		console.clear();
 	}
