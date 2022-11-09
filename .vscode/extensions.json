@@ -7,6 +7,7 @@
 		"esbenp.prettier-vscode",
 		"redhat.vscode-yaml",
 		"idered.npm",
-		"streetsidesoftware.code-spell-checker"
+		"streetsidesoftware.code-spell-checker",
+		"aaron-bond.better-comments"
 	]
 }

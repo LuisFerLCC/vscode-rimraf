@@ -2,7 +2,7 @@
 	"name": "vscode-rimraf",
 	"displayName": "VSCode Rimraf: Delete files permanently",
 	"description": "Permanently delete files and folders (like `npx rimraf` or `rm -rf`) directly from the VSCode GUI.",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"author": "LuisFerLCC",
 	"publisher": "luisferlcc",
 	"icon": "media/vscode-rimraf-icon.png",
@@ -103,15 +103,17 @@
 		"@types/vscode": "1.70.0",
 		"@typescript-eslint/eslint-plugin": "^5.42.1",
 		"@typescript-eslint/parser": "^5.42.1",
-		"empty-trash": "^4.0.0",
 		"esbuild": "^0.15.13",
 		"eslint": "^8.27.0",
 		"eslint-config-google": "^0.14.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-import": "^2.26.0",
 		"eslint-plugin-prettier": "^4.2.1",
+		"p-filter": "^3.0.0",
 		"prettier": "^2.7.1",
-		"typescript": "^4.8.4"
+		"run-jxa": "^3.0.0",
+		"typescript": "^4.8.4",
+		"xdg-trashdir": "^3.1.0"
 	},
 	"repository": {
 		"url": "https://github.com/LuisFerLCC/vscode-rimraf"

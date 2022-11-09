@@ -1,8 +1,5 @@
 // @ts-check
 
-import { readFileSync } from "fs";
-import { pathToFileURL } from "url";
-
 import { build } from "esbuild";
 import { copyPlugin } from "@sprout2000/esbuild-copy-plugin";
 
@@ -38,25 +35,12 @@ build({
 		js: banner,
 	},
 	bundle: true,
+	treeShaking: true,
 	minify: true,
 	sourcemap: true,
 
 	watch: watchMode,
-	plugins: [
-		copyPlugin({ src: "./node_modules/empty-trash/lib/", dest: "./dist/lib/" }),
-
-		{
-			name: "import.meta.url",
-
-			setup({ onLoad }) {
-				onLoad({ filter: /\.js$/, namespace: "file" }, args => {
-					let code = readFileSync(args.path, "utf8");
-					code = code.replace(/\bimport\.meta\.url\b/g, JSON.stringify(pathToFileURL(args.path)));
-					return { contents: code };
-				});
-			},
-		},
-	],
+	plugins: [copyPlugin({ src: "./src/lib/", dest: "./dist/lib/" })],
 }).then(() => {
 	if (!watchMode) return stdout.write("Compiled successfully.\n");
 
