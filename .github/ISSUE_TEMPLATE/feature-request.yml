@@ -8,7 +8,10 @@ assignees: LuisFerLCC
 body:
   - type: markdown
     attributes:
-      value: <h1 align="center">Feature Request</h1>
+      value: |
+        <h1 align="center">Feature Request</h1>
+
+        **IMPORTANT:** IF YOU WANT TO REPORT A SECURITY VULNERABILITY, PLEASE USE [SECURITY ADVISORIES](https://github.com/LuisFerLCC/vscode-rimraf/security/advisories/new) TO FILE A PRIVATE REPORT.
 
   - type: textarea
     id: description
