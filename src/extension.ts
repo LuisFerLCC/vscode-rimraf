@@ -10,6 +10,7 @@ const horizontalLine = "=".repeat(70);
 
 export async function activate(context: ExtensionContext): Promise<void> {
 	Logger.clear();
+
 	Logger.info(
 		horizontalLine,
 		`Visual Studio Code version: ${vscode.version}`,
@@ -78,6 +79,7 @@ export async function activate(context: ExtensionContext): Promise<void> {
 
 		commands.registerCommand("vscode-rimraf.save-logs", () => {
 			Logger.debug("command save-logs");
+
 			if (!Logger.rootDirectory) {
 				const message = "The log file cannot be saved; no workspace open.";
 
@@ -86,9 +88,7 @@ export async function activate(context: ExtensionContext): Promise<void> {
 			}
 
 			Logger.save();
-			return window.showInformationMessage(
-				`Debug logs will be saved at "${Logger.rootDirectory.path}/vscode-rimraf-debug.log".`
-			);
+			return window.showInformationMessage(Logger.saveLogsMessage);
 		})
 	);
 

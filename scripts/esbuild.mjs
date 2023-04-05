@@ -1,31 +1,29 @@
-// @ts-check
-
-import { build } from "esbuild";
+import { context } from "esbuild";
 import { copyPlugin } from "@sprout2000/esbuild-copy-plugin";
 
 const { stdout } = process;
-const watchMode = process.argv.includes("--watch");
 
 const banner = `/**
  * VSCode Rimraf
  * Visual Studio Code extension by LuisFerLCC
  * luisferlcc.vscode-rimraf
+ *
+ * https://github.com/luisferlcc/vscode-rimraf/blob/master/LICENSE
  */
 `;
 
 let dots = 0;
 
 function tick() {
-	dots = (dots + 1) % 3;
+	dots = (dots % 3) + 1;
 
 	console.clear();
+
 	stdout.write(`ESBuild is active.
-Watching${Array(dots + 1)
-		.fill(".")
-		.join("")}`);
+Watching${Array(dots).fill(".").join("")}`);
 }
 
-build({
+context({
 	entryPoints: ["./src/extension.ts"],
 	platform: "node",
 	external: ["vscode"],
@@ -38,12 +36,20 @@ build({
 	treeShaking: true,
 	minify: true,
 	sourcemap: true,
+	sourcesContent: false,
 
-	watch: watchMode,
 	plugins: [copyPlugin({ src: "./src/lib/", dest: "./dist/lib/" })],
-}).then(() => {
-	if (!watchMode) return stdout.write("Compiled successfully.\n");
+}).then(context => {
+	if (!process.argv.includes("--watch")) {
+		stdout.write("Compiled successfully.\n");
+		context.rebuild();
+		return context.dispose();
+	}
 
-	tick();
-	return setInterval(tick, 1000);
+	context.watch().then(() => {
+		tick();
+		return setInterval(tick, 1000);
+	});
+
+	return;
 });

@@ -1,5 +1,6 @@
 {
 	"recommendations": [
+		"aaron-bond.better-comments",
 		"dbaeumer.vscode-eslint",
 		"editorconfig.editorconfig",
 		"github.vscode-pull-request-github",
@@ -7,7 +8,6 @@
 		"esbenp.prettier-vscode",
 		"redhat.vscode-yaml",
 		"idered.npm",
-		"streetsidesoftware.code-spell-checker",
-		"aaron-bond.better-comments"
+		"streetsidesoftware.code-spell-checker"
 	]
 }

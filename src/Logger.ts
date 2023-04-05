@@ -1,4 +1,4 @@
-import { existsSync } from "fs";
+import { join } from "path";
 import { Uri, window, workspace } from "vscode";
 
 namespace Logger {
@@ -23,14 +23,16 @@ namespace Logger {
 
 	let _logFileUri: Uri | undefined = undefined;
 	let _saveLogs = false;
+	const _logFilePath: string = rootDirectory ? join(rootDirectory.fsPath, "vscode-rimraf-debug.log") : "";
+
+	export const saveLogsMessage = `Debug logs will be saved at "${rootDirectory?.path ?? "(workspace)"}/vscode-rimraf-debug.log".`;
 
 	function _print(...newLines: string[]): void {
 		_lines.push(...newLines);
 		newLines.forEach(line => _outputChannel.appendLine(line));
 
 		if (!rootDirectory) return;
-
-		if (!_logFileUri) _logFileUri = Uri.file(`${rootDirectory.path}/vscode-rimraf.debug.log`);
+		if (!_logFileUri) _logFileUri = Uri.file(_logFilePath);
 		if (_saveLogs) _fs.writeFile(_logFileUri, Buffer.from(_lines.join("\r\n")));
 	}
 
@@ -62,9 +64,10 @@ namespace Logger {
 	}
 
 	export function clear(): void {
+		_lines.length = 0;
 		refresh();
 
-		if (_logFileUri && existsSync(_logFileUri.path)) _fs.delete(_logFileUri);
+		if (_logFileUri) _fs.delete(_logFileUri);
 		_outputChannel.clear();
 		console.clear();
 	}
@@ -72,6 +75,7 @@ namespace Logger {
 	export function save(): void {
 		_saveLogs = true;
 		debug(`set _saveLogs: ${_saveLogs}`);
+		info(saveLogsMessage);
 		refresh();
 	}
 }
