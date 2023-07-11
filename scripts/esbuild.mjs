@@ -1,7 +1,8 @@
 import { context } from "esbuild";
-import { copyPlugin } from "@sprout2000/esbuild-copy-plugin";
+import copy from "@sprout2000/esbuild-copy-plugin";
 
 const { stdout } = process;
+const { copyPlugin } = copy;
 
 const banner = `/**
  * VSCode Rimraf

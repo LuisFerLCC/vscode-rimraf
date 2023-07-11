@@ -13,10 +13,7 @@
 			"script": "build",
 
 			"isBackground": false,
-			"group": {
-				"kind": "build",
-				"isDefault": true
-			},
+			"group": "build",
 			"presentation": {
 				"echo": false,
 				"panel": "dedicated",
@@ -61,18 +58,18 @@
 		},
 
 		{
-			"label": "VSCode: Run tests",
+			"label": "VSCode: Bundle extension",
 			"icon": {
-				"id": "beaker",
+				"id": "archive",
 				"color": "terminal.ansiCyan"
 			},
 
 			"type": "npm",
-			"script": "test",
+			"script": "package",
 
 			"isBackground": false,
 			"group": {
-				"kind": "test",
+				"kind": "build",
 				"isDefault": true
 			},
 			"presentation": {
