@@ -25,6 +25,8 @@ Watching${Array(dots).fill(".").join("")}`);
 }
 
 context({
+	tsconfig: "./tsconfig.base.json",
+
 	entryPoints: ["./src/extension.ts"],
 	platform: "node",
 	external: ["vscode"],

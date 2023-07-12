@@ -1,0 +1,45 @@
+{
+	"compilerOptions": {
+		"target": "es2020",
+		"lib": ["esnext"],
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"useDefineForClassFields": true,
+
+		"module": "esnext",
+		"moduleResolution": "node",
+		"types": ["node"],
+		"resolveJsonModule": true,
+
+		"sourceMap": true,
+		"importHelpers": true,
+		"stripInternal": true,
+		"noEmitOnError": true,
+
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+
+		"strict": true,
+		"noImplicitAny": true,
+		"strictNullChecks": true,
+		"strictFunctionTypes": true,
+		"strictBindCallApply": true,
+		"strictPropertyInitialization": true,
+		"noImplicitThis": true,
+		"useUnknownInCatchVariables": true,
+		"alwaysStrict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"exactOptionalPropertyTypes": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUncheckedIndexedAccess": true,
+		"noImplicitOverride": true,
+		"noPropertyAccessFromIndexSignature": true,
+
+		"skipLibCheck": true
+	},
+
+	"include": ["./src/**/*.ts"]
+}

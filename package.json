@@ -88,10 +88,10 @@
 		}
 	},
 	"scripts": {
-		"build": "node scripts/esbuild.mjs",
+		"build": "tsc --noEmit && node scripts/esbuild.mjs",
 		"build:watch": "npm run prebuild && node scripts/esbuild.mjs --watch",
 		"package": "npm run build && vsce package",
-		"prebuild": "npm run format && rm -rf dist",
+		"prebuild": "rm -rf dist *.vsix && npm run format",
 		"format": "prettier --write . && eslint --ext .js,.mjs,.ts --fix ."
 	},
 	"devDependencies": {

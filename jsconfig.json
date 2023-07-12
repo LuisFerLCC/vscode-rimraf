@@ -1,0 +1,23 @@
+{
+	"extends": "./tsconfig.json",
+
+	"compilerOptions": {
+		"composite": true,
+
+		"target": "esnext",
+		"lib": ["esnext"],
+
+		"module": "esnext",
+		"types": ["node"],
+
+		"allowJs": true,
+		"checkJs": true,
+
+		"outDir": "./dist/",
+		"noEmit": false
+	},
+
+	"include": ["./.eslintrc.js", "./scripts/**/*.mjs"],
+	"exclude": [],
+	"references": []
+}
