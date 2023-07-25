@@ -96,9 +96,9 @@
 	},
 	"devDependencies": {
 		"@sprout2000/esbuild-copy-plugin": "^1.1.12",
-		"@types/eslint": "^8.44.0",
-		"@types/node": "^20.4.4",
-		"@types/vscode": "^1.70.0",
+		"@types/eslint": "^8.44.1",
+		"@types/node": "^20.4.5",
+		"@types/vscode": "^1.80.0",
 		"@typescript-eslint/eslint-plugin": "^6.2.0",
 		"@typescript-eslint/parser": "^6.2.0",
 		"esbuild": "^0.18.16",
