@@ -7,7 +7,6 @@
 		"eamodio.gitlens",
 		"esbenp.prettier-vscode",
 		"redhat.vscode-yaml",
-		"idered.npm",
 		"streetsidesoftware.code-spell-checker"
 	]
 }
