@@ -9,8 +9,8 @@
 				"color": "terminal.ansiYellow"
 			},
 
-			"type": "npm",
-			"script": "build",
+			"type": "shell",
+			"command": "bun run build",
 
 			"isBackground": false,
 			"group": "build",
@@ -30,8 +30,8 @@
 				"color": "terminal.ansiYellow"
 			},
 
-			"type": "npm",
-			"script": "build:watch",
+			"type": "shell",
+			"command": "bun run build:watch",
 
 			"isBackground": true,
 			"group": "build",
@@ -50,7 +50,7 @@
 					"base": "$eslint-compact",
 
 					"background": {
-						"beginsPattern": { "regexp": ">" },
+						"beginsPattern": { "regexp": "$" },
 						"endsPattern": { "regexp": "ESBuild is active" }
 					}
 				}
@@ -64,8 +64,8 @@
 				"color": "terminal.ansiCyan"
 			},
 
-			"type": "npm",
-			"script": "package",
+			"type": "shell",
+			"command": "bun run package",
 
 			"isBackground": false,
 			"group": {
@@ -88,8 +88,8 @@
 				"color": "terminal.ansiMagenta"
 			},
 
-			"type": "npm",
-			"script": "format",
+			"type": "shell",
+			"command": "bun run format",
 
 			"isBackground": false,
 			"group": "build",
@@ -103,14 +103,14 @@
 		},
 
 		{
-			"label": "NPM: Link local dependencies",
+			"label": "Bun: Link local dependencies",
 			"icon": {
 				"id": "package",
-				"color": "terminal.ansiRed"
+				"color": "terminal.ansiYellow"
 			},
 
 			"type": "shell",
-			"command": "npm link ${input:localPackages}",
+			"command": "bun link ${input:localPackages}",
 
 			"isBackground": false,
 			"presentation": {

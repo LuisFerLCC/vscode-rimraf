@@ -20,6 +20,10 @@ const execFile = promisify(_execFile);
 
 async function _emptyLinuxTrashes(): Promise<void[]> {
 	const trashDirs = await pFilter(await xdgTrashdir.all(), existsSync);
+
+	const localTrashDir = path.join(process.env["HOME"]!, ".local/share/Trash");
+	if (existsSync(localTrashDir)) trashDirs.push(localTrashDir);
+
 	return Promise.all(trashDirs.map(trashDir => rm(trashDir, { recursive: true })));
 }
 

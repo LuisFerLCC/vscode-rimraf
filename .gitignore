@@ -1,14 +1,10 @@
 # dependencies
 /node_modules
+node_modules.bun
 
 # production
 /dist
 *.vsix
-
-# bun (not production ready)
-bun.lockb
-bunfig.toml
-node_modules.bun
 
 # IDEs and editors
 /.idea
